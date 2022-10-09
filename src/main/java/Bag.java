@@ -107,9 +107,10 @@ public abstract class Bag {
      * @param n the amount to increase this Bag's capacity by
      */
     public void increaseCapacity(int n) {
+        int temp = capacity;
         capacity += n;
         String[] newContents = new String[capacity];
-        for (int i = 0; i < capacity; i++) {
+        for (int i = 0; i < temp; i++) {
             newContents[i] = contents[i];
         }
         contents = newContents;
